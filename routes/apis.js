@@ -13,9 +13,9 @@ var moment = require('moment');
 
 // 設定值
 var config = {
-    userName: '',
-    password: '',
-    server: '',
+    userName: 'rescueAPI@t7fvhl4jab.database.windows.net',
+    password: 'rAPI2015+',
+    server: 't7fvhl4jab.database.windows.net',
     options: {
         database: 'rescueDB',
         encrypt: true,
@@ -41,10 +41,13 @@ router.get('/rescueInfo', function (req, res) {
                     yAddr: columns[2].value,
                     rescueTime: columns[3].value,
                     photoUrl: columns[4].value,
-                    videoUrl: columns[5].value
+                    videoUrl: columns[5].value,
+                    audioUrl: columns[7].value,
+                    senderName: columns[8].value,
+                    senderId: columns[9].value
                 });
             });
-            res.json(list);
+            res.jsonp(list);
         });
         connection.execSql(request);
     });
@@ -53,13 +56,13 @@ router.get('/rescueInfo', function (req, res) {
 router.post('/rescueInfo', function (req, res) {
     var connection = new Connection(config);
     connection.on('connect', function (err) {                        
-        var sql = " INSERT INTO [RescueInfo]([gId],[xAddr],[yAddr],[rescueTime],[photoUrl],[videoUrl]) VALUES(@gId ,@xAddr ,@yAddr ,@rescueTime ,@photoUrl ,@videoUrl)";
+        var sql = " INSERT INTO [RescueInfo]([gId],[xAddr],[yAddr],[rescueTime],[photoUrl],[videoUrl],[audioUrl],[senderName],[senderId]) VALUES(@gId ,@xAddr ,@yAddr ,@rescueTime ,@photoUrl ,@videoUrl,@audioUrl,@senderName,@senderId)";
         request = new Request(sql, function (err, rowCount, rows) {
             if (err) {
                 console.log(err);
-                res.json({ error: true, message: err });
+                res.jsonp({ error: true, message: err });
             } else {
-                res.json({ error: false, message: 'add sccuess.' });
+                res.jsonp({ error: false, message: 'add sccuess.' });
             }
         });
         
@@ -69,7 +72,10 @@ router.post('/rescueInfo', function (req, res) {
         request.addParameter('rescueTime', TYPES.DateTime, moment(req.body.rescueTime).toDate());
         request.addParameter('photoUrl', TYPES.NVarChar, req.body.photoUrl);
         request.addParameter('videoUrl', TYPES.NVarChar, req.body.videoUrl);
-        
+        request.addParameter('audioUrl', TYPES.NVarChar, req.body.audioUrl);
+        request.addParameter('senderName', TYPES.NVarChar, req.body.senderName);
+        request.addParameter('senderId', TYPES.NVarChar, req.body.senderId);
+
         // 執行
         connection.execSql(request);
 
@@ -98,7 +104,7 @@ router.get('/helpInfo', function (req, res) {
                     website: columns[5].value
                 });
             });
-            res.json(list);
+            res.jsonp(list);
         });
         
         // 執亍
@@ -124,9 +130,9 @@ router.post('/helpInfo', function (req, res) {
         request = new Request(sql, function (err, rowCount, rows) {
             if (err) {
                 console.log(err);
-                res.json({ error: true, message: err });
+                res.jsonp({ error: true, message: err });
             } else {
-                res.json({ error: false, message: 'add sccuess.' });
+                res.jsonp({ error: false, message: 'add sccuess.' });
             }           
         });
         
