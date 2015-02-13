@@ -1,20 +1,19 @@
-#
+
 ## 守護台灣比賽
 
 KKAwsome
 
-Demo網址 http://rescuetw.azurewebsites.net/
+Demo WebSite: http://rescuetw.azurewebsites.net/
 
+GitHub: 
+
+WebSite: https://github.com/kyleap/rescue.Web
+
+Mobile: https://github.com/alexktchen/rescue.iOS
 
 
 ## Synopsis
 This project provide api service for mobile and web.
-
-
-
-## Code Example
-
-## Motivation
 
 ## API Reference
 GET rescueapiservice.azurewebsites.net/api/helpInfo
