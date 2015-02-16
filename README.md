@@ -23,7 +23,7 @@ This project provide api service for mobile and web.
   Method: GET
   
   Return:
-	{
+	
 	
         "id": 主鍵,
         "xAddr": 座標(E),
@@ -35,8 +35,6 @@ This project provide api service for mobile and web.
         "senderName": 送出資料者名稱(APP),
         "senderId": 送出資料者主鍵(APP)
         
-    }
-    
   說明：取得求救點資料
 
 * URL: http://rescueapiservice.azurewebsites.net/api/rescueInfo
@@ -45,8 +43,8 @@ This project provide api service for mobile and web.
 
   Content-Type: application/x-www-form-urlencoded
 
-  Data: {
-        
+  Data: 
+  
         "id": 主鍵,
         "xAddr": 座標(E),
         "yAddr": 座標(N),
@@ -57,8 +55,6 @@ This project provide api service for mobile and web.
         "senderName": 送出資料者名稱(APP),
         "senderId": 送出資料者主鍵(APP)
         
-	  }
-	  
   說明：新增求救點資料
 
 * URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
@@ -66,7 +62,6 @@ This project provide api service for mobile and web.
   Method: GET
 
   Return:
-	{
 	
         "id": 主鍵,
         "name":  名稱,
@@ -75,8 +70,6 @@ This project provide api service for mobile and web.
         "tel": 電話,
         "website": 網站URL
         
-    }
-    
   說明：取得救援資料
 		
 * URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
@@ -85,16 +78,14 @@ This project provide api service for mobile and web.
 
   Content-Type: application/x-www-form-urlencoded
 
-  Data: {
-
+  Data:
+  
         "gid": 主鍵,
         "name":  名稱 ,
         "xAddr": 座標(E),
         "yAddr": 座標(N),
         "tel": 電話,
         "website": 網站URL
-        
-	  }
  	  
   說明：新增救援資料
 
