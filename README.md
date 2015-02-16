@@ -18,11 +18,11 @@ This project provide api service for mobile and web.
 
 ## API Reference
 
-URL: http://rescueapiservice.azurewebsites.net/api/rescueInfo
+* URL: http://rescueapiservice.azurewebsites.net/api/rescueInfo
 
-Method: GET
-
-Return:
+  Method: GET
+  
+  Return:
 	{
 	
         "id": 主鍵,
@@ -37,15 +37,15 @@ Return:
         
     }
     
-說明：取得求救點資料
+  說明：取得求救點資料
 
-URL: http://rescueapiservice.azurewebsites.net/api/rescueInfo
+* URL: http://rescueapiservice.azurewebsites.net/api/rescueInfo
 
-Method:POST
+  Method:POST
 
-Content-Type: application/x-www-form-urlencoded
+  Content-Type: application/x-www-form-urlencoded
 
-Data: {
+  Data: {
         
         "id": 主鍵,
         "xAddr": 座標(E),
@@ -59,13 +59,13 @@ Data: {
         
 	  }
 	  
-說明：新增求救點資料
+  說明：新增求救點資料
 
-URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
+* URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
 
-Method: GET
+  Method: GET
 
-Return:
+  Return:
 	{
 	
         "id": 主鍵,
@@ -76,15 +76,16 @@ Return:
         "website": 網站URL
         
     }
-說明：取得救援資料
+    
+  說明：取得救援資料
 		
-URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
+* URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
 
-Method:POST
+  Method:POST
 
-Content-Type: application/x-www-form-urlencoded
+  Content-Type: application/x-www-form-urlencoded
 
-Data: {
+  Data: {
 
         "gid": 主鍵,
         "name":  名稱 ,
@@ -94,8 +95,8 @@ Data: {
         "website": 網站URL
         
 	  }
-	  
-說明：新增救援資料
+ 	  
+  說明：新增救援資料
 
 
 
