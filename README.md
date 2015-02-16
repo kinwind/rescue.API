@@ -41,7 +41,7 @@ This project provide api service for mobile and web.
 
 * URL: http://rescueapiservice.azurewebsites.net/api/rescueInfo
 
-  Method:POST
+  Method: POST
 
   Content-Type: application/x-www-form-urlencoded
 
@@ -81,7 +81,7 @@ This project provide api service for mobile and web.
 		
 * URL: http://rescueapiservice.azurewebsites.net/api/helpInfo
 
-  Method:POST
+  Method: POST
 
   Content-Type: application/x-www-form-urlencoded
 
