@@ -98,9 +98,3 @@ This project provide api service for mobile and web.
  	  
   說明：新增救援資料
 
-
-
-## Contributors
-
-## License
-
